@@ -1,1 +1,87 @@
-loadstring(game:HttpGet('https://cdn.discordapp.com/attachments/922823751127683082/1007230718335778856/Protected.lua'))();
+--Cre: Darwin
+local Mercury = loadstring(game:HttpGet("https://raw.githubusercontent.com/Ajelrs/q/main/Ui"))()
+
+local GUI = Mercury:Create{
+    Name = "Cart Ride",
+    Size = UDim2.fromOffset(580, 400),
+    Theme = Mercury.Themes.Dark,
+    Link = "https://www.Vietnamese Hub.xyz/CartRide"
+}
+
+local Tab = GUI:Tab{
+	Name = "Main",
+	Icon = "http://www.roblox.com/asset/?id=10554508105"
+}
+
+local Tab3 = GUI:Tab{
+	Name = "Dhsjjeje",
+	Icon = "rbxassetid://52756151"
+}
+
+GUI:Notification{
+	Title = "Cảnh báo từ DARWIN",
+	Text = "Nếu error thì vào discord.gg/enzsTq89",
+	Duration = 20,
+	Callback = function() end
+}
+
+Tab:Button{
+	Name = "Rejoin",
+	Description = nil,
+	Callback = function()
+        local tpservice= game:GetService("TeleportService")
+        local plr = game.Players.LocalPlayer
+    
+        tpservice:Teleport(game.PlaceId, plr)
+    end,
+}
+
+Tab:Button{
+	Name = "Ez win",
+	Description = nil,
+	Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(310.683014, 849.75, 321.389221, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+    end,
+}
+
+Tab:Button{
+	Name = "Teleport Start",
+	Description = nil,
+	Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(44, 0.049999997, -76, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+    end,
+}
+
+Tab3:Slider{
+	Name = "WalkSpeed",
+	Default = 16,
+	Min = 16,
+	Max = 1000,
+	Callback = function(deez) 
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = (deez)
+    end,
+}
+
+Tab3:Slider{
+	Name = "JumpPower",
+	Default = 50,
+	Min = 50,
+	Max = 1000,
+	Callback = function(nuts) 
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = (nuts)
+    end,
+}
+
+Tab3:Button{
+	Name = "Admin (Infinite Yield)",
+	Description = nil,
+	Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+    end,
+}
+
+GUI:Credit{
+	Name = "discord",
+	Description = "click = link",
+	Discord = "https://discord.gg/enzsTq89"
+}
