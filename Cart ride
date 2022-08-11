@@ -14,15 +14,15 @@ local Tab = GUI:Tab{
 }
 
 local Tab3 = GUI:Tab{
-	Name = "Dhsjjeje",
+	Name = "Misc",
 	Icon = "rbxassetid://52756151"
 }
 
 GUI:Notification{
-	Title = "Cảnh báo từ DARWIN",
-	Text = "Nếu error thì vào discord.gg/enzsTq89",
-	Duration = 20,
-	Callback = function() end
+    Title = "Cảnh báo từ DARWIN",
+    Text = "Nếu bạn gặp lỗi thì vào discord.gg/enzsTq89",
+    Duration = 20,
+    Callback = function() end
 }
 
 Tab:Button{
